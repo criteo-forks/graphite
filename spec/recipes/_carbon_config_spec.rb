@@ -52,4 +52,9 @@ describe 'graphite::_carbon_config' do
   it 'to create the graphite_carbon_conf_accumulator resource' do
     expect(chef_run).to create_graphite_carbon_conf_accumulator('default')
   end
+
+  it 'to create the graphite_storage_aggregation_conf_accumulator resource' do
+    expect(chef_run).to create_graphite_storage_aggregation_conf_accumulator('default')
+  end
+
 end
