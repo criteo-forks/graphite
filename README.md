@@ -104,6 +104,7 @@ Management for the various [Carbon](https://github.com/graphite-project/carbon) 
 
 - `graphite_storage`: makes a directory intended for graphite storage, installs whisper
 - `graphite_storage_schema`: data driven resource for storage schema
+- `graphite_storage_aggregation`: data driven resource for storage aggregation
 
 ### Graphite Web
 
@@ -121,6 +122,7 @@ Due to the graphite config file format, the data driven resources use an accumul
 
 - `graphite_carbon_conf_accumulator`: lookup named carbon resources in run context and gather config
 - `graphite_storage_conf_accumulator`: lookup named storage schema resources in run context and gather config
+- `graphite_storage_aggregation_conf_accumulator`: lookup named storage aggregation resources in run context and gather config
 
 If you look at the [example cookbook recipe](https://github.com/sous-chefs/graphite/blob/master/test/fixtures/cookbooks/test/recipes/single_node.rb#L9) you probably notice that many of the resources simply take a single `config` attribute, which is basically a hash of the configuration to be written.
 
