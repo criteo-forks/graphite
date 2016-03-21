@@ -25,7 +25,7 @@ end
 user node['graphite']['user'] do
   system true
   group node['graphite']['group']
-  home '/var/lib/graphite'
-  shell '/bin/false'
+  home node['graphite']['base_dir']
+  shell '/bin/bash'
   action :create
 end
