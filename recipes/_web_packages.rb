@@ -17,6 +17,7 @@
 # limitations under the License.
 #
 
+include_recipe "build-essential"
 include_recipe "yum-epel" if platform_family?("rhel")
 
 Array(node['graphite']['system_packages']).each do |p|
