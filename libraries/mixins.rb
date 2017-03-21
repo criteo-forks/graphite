@@ -22,7 +22,7 @@ module ChefGraphite
     def resources_to_hashes(resources, whitelist = [])
       Array(resources).map do |resource|
         type = if whitelist.include?(resource.resource_name.to_sym)
-                 resource.resource_name.to_s.split('_').last
+                 resource.resource_name.to_s.split('_',3).last.gsub(/_/,'-')
                end
         {
           type: type,
