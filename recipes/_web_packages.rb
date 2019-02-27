@@ -43,7 +43,10 @@ python_package 'uwsgi' do
   options '--isolated'
 end
 
-python_package 'cairocffi'
+# latest version compatible with Python 2.7
+python_package 'cairocffi' do
+  version '0.9.0'
+end
 
 python_package 'graphite_web' do
   package_name lazy {
