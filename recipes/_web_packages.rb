@@ -38,6 +38,11 @@ python_package 'uwsgi' do
   virtualenv node['graphite']['base_dir']
 end
 
+# latest version compatible with Python 2.7
+python_package 'cairocffi' do
+  version '0.9.0'
+end
+
 python_package 'graphite_web' do
   package_name lazy {
     key = node['graphite']['install_type']
